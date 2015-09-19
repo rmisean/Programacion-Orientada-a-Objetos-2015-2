@@ -4,42 +4,49 @@ public class NumeroimparOpar {
     public static void main(String[] args) {
           int a,b;
         System.out.println("Ingrese dos numeros y dice cual es par, impar, mayor y si son multiplos.");
+        
         System.out.println("ingrese el primer numero:");
         Scanner sc = new Scanner(System.in); 
         a= sc.nextInt();
+        
         System.out.println("ingrese el segundo numero: ");
         Scanner ss = new Scanner(System.in);
         b=ss.nextInt();
- 		if(a%2==0){ 
- 		System.out.println("-->El primer numero es par");
- 		} 
- 		else 
- 		{ 
- 		System.out.println("-->El primer numero es impar");
- 		} 
+ 		
+ 		    if(a%2==0){ 
+ 		        System.out.println("-->El primer numero es par");
+ 		    } 
+ 		
+ 		    else 
+ 		        { 
+ 		        System.out.println("-->El primer numero es impar");
+ 		    } 
                 
                 if(b%2==0){
-                System.out.println("-->El Segundo numero es par");
- 		} 
- 		else 
- 		{ 
- 		System.out.println("-->El segundo numero es impar");
- 		} 
+                    System.out.println("-->El Segundo numero es par");
+ 		        } 
+ 		        
+ 		        else 
+ 		            { 
+ 		            System.out.println("-->El segundo numero es impar");
+ 		        } 
                 
                 if(a<b){
-                 System.out.println("-->El Segundo numero es mayor");
- 		} 
- 		else 
- 		{ 
- 		System.out.println("-->El primero numero es mayor");
-                }
+                    System.out.println("-->El Segundo numero es mayor");
+ 		        } 
+ 		
+ 		        else 
+ 		            { 
+ 		            System.out.println("-->El primero numero es mayor");
+                    }
                 
                 if(b%a==0){ 
- 		System.out.println("-->El primer numero es multiplo del segundo");
- 		} 
- 		else 
- 		{ 
- 		System.out.println("-->No son multiplos");
- 		} 
-}
+ 		            System.out.println("-->El primer numero es multiplo del segundo");
+ 		        } 
+ 		        
+ 		        else 
+ 		            { 
+ 		            System.out.println("-->No son multiplos");
+ 		            } 
+        }
 }
