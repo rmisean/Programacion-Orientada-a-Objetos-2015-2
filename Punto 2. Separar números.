@@ -1,0 +1,15 @@
+
+import java.util.Scanner;
+
+
+public class Separar {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Ingresa un numero entero:");
+        Integer numeros = scan.nextInt();
+        char[] nums = numeros.toString().toCharArray();
+        for(char c: nums) {
+            System.out.print(c + "   ");
+        }        
+    }
+}
