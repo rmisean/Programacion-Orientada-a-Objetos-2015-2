@@ -1,6 +1,5 @@
 package numeroimparopar;
 import java.util.Scanner;
-
 public class NumeroimparOpar {
 
     public static void main(String[] args) {
