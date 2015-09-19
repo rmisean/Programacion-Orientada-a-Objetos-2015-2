@@ -1,0 +1,33 @@
+package C_Average;
+
+import java.util.*;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		System.out.println("Ingrese los numeros (Para terminar ingrese el numero 9999): ");
+		int x;
+		int j = 0;
+		while(sc.hasNext()){
+			x = sc.nextInt();
+			if(x != 9999){
+				numbers.add(j,x);
+				j++;
+			}else{
+				break;
+			}
+		}
+		int k = 0;
+		for (int i = 0; i < j; i++) {
+			k = k + numbers.get(i);
+		}
+		 int average = k / j;
+		 System.out.println("El promedio es: " + average);
+		
+		sc.close();
+	}
+	
+}
