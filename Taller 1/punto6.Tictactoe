@@ -1,0 +1,156 @@
+package tictactoedos;
+import java.util.Scanner;
+public class Tictactoedos {
+    
+    private int c;
+    private char p[]=new char[10];
+    private char jugador;
+    
+    public static void main(String[] args) {
+         String f;
+        Tictactoedos Toe=new Tictactoedos();
+        do{
+            Toe.newBoard();
+            Toe.play();
+            System.out.println ("Volvemos a Jugar ok?");
+            Scanner in =new Scanner(System.in);
+            f=in.nextLine();
+        }while (f.equals("ok"));
+        String g;
+        Tictactoedos jugar=new Tictactoedos();    
+    }
+    public  void newBoard()
+    {
+       
+        char matriz[] = {'0','1', '2', '3', '4', '5', '6', '7', '8', '9'};
+        int i;
+        c = 0;
+        jugador = 'X';
+        for (i=1; i<10; i++) p[i]=matriz[i];
+        currentBoard();
+                
+    }
+    public String currentBoard()
+    {
+        System.out.println(  "\t" + p[1] + "   | " +p[2]+ "  | " +p[3]);
+        System.out.println(  " \t ___|____|___ " );
+        System.out.println(  "\t" +p[4]+ "   | " +p[5]+ "  | " +p[6]);
+        System.out.println(  " \t ___|____|___ " );
+        System.out.println(  "\t" +p[7]+ "   | " +p[8]+ "  | " +p[9]);
+        System.out.println(  " \t    |    |   " );
+        System.out.println(  "\n\n" );
+        return "currentBoard";
+    }
+    
+    public  void play()
+    {
+        int poner;
+        char blank = ' ';
+        
+        System.out.println(  "Jugador " + getPlayer() +" empezará primero con la 'X'" );
+        
+        do {
+            currentBoard();              // display current board
+            
+            System.out.println(  "\n Jugador " + getPlayer() +" escoja la posición" );
+            
+            boolean posc = true;
+            while (posc) {
+                // System.out.println( "position is taken, please enter a valid space");
+                Scanner in =new Scanner (System.in);
+                poner=in.nextInt();
+                posc = checkPosn(poner);
+                if(posc==false)
+                p[poner]=getPlayer();
+            }
+            
+            System.out.println(  "Bien hecho" );
+            
+            currentBoard();              // display current board
+            
+            nextPlayer();
+        }while ( checkWinner() == blank );
+        
+    }
+    
+    public  char checkWinner()
+    {
+        char Winner = ' ';
+        
+        // Check if X wins
+        if (p[1] == 'X' && p[2] == 'X' && p[3] == 'X') Winner = 'X';
+        if (p[4] == 'X' && p[5] == 'X' && p[6] == 'X') Winner = 'X';
+        if (p[7] == 'X' && p[8] == 'X' && p[9] == 'X') Winner = 'X';
+        if (p[1] == 'X' && p[4] == 'X' && p[7] == 'X') Winner = 'X';
+        if (p[2] == 'X' && p[5] == 'X' && p[8] == 'X') Winner = 'X';
+        if (p[3] == 'X' && p[6] == 'X' && p[9] == 'X') Winner = 'X';
+        if (p[1] == 'X' && p[5] == 'X' && p[9] == 'X') Winner = 'X';
+        if (p[3] == 'X' && p[5] == 'X' && p[7] == 'X') Winner = 'X';
+        if (Winner == 'X' )
+        {System.out.println("El jugador 1 tiene Triqui" );
+            return Winner;
+        }
+        
+        // Check if O wins
+        if (p[1] == 'O' && p[2] == 'O' && p[3] == 'O') Winner = 'O';
+        if (p[4] == 'O' && p[5] == 'O' && p[6] == 'O') Winner = 'O';
+        if (p[7] == 'O' && p[8] == 'O' && p[9] == 'O') Winner = 'O';
+        if (p[1] == 'O' && p[4] == 'O' && p[7] == 'O') Winner = 'O';
+        if (p[2] == 'O' && p[5] == 'O' && p[8] == 'O') Winner = 'O';
+        if (p[3] == 'O' && p[6] == 'O' && p[9] == 'O') Winner = 'O';
+        if (p[1] == 'O' && p[5] == 'O' && p[9] == 'O') Winner = 'O';
+        if (p[3] == 'O' && p[5] == 'O' && p[7] == 'O') Winner = 'O';
+        if (Winner == 'O' )
+        {
+            System.out.println( "EL jugador 2 tiene Triqui" );
+        return Winner; }
+        
+        // check for Tie
+        for(int i=1;i<10;i++)
+        {
+            if(p[i]=='X' || p[i]=='O')
+            {
+                if(i==9)
+                {
+                    char Draw='D';
+                    System.out.println(" Nadie Gana ");
+                    return Draw;
+                }
+            }
+            else
+            break;
+            
+        }
+        
+        return Winner;
+    }
+    
+    public  boolean checkPosn(int poner)
+    {
+     
+        if (p[poner] == 'X' || p[poner] == 'O')
+        {
+            System.out.println("ya fue tomada, escoja otra posición");
+            return true;
+        }
+        else {
+            return false;
+        }
+        
+        //  counter++;
+        //    return false;
+    }
+       
+    public  void nextPlayer()
+    {
+        if (jugador == 'X')
+        jugador = 'O';
+        else jugador = 'X';
+        
+    }
+    
+    public  char getPlayer()
+    {
+        return jugador;
+    }
+}
