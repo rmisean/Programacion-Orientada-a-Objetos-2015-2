@@ -1,0 +1,57 @@
+package hangman;
+import java.util.Scanner;
+public class Hangman {
+    public static void main(String[] args) {
+       System.out.println("HANGMAN... ");
+       String p,l,p2,h;
+       
+       p="supremo";
+       p2=p;
+       //h="q(X_X)p";
+       
+       char[]n={'q','(','X','_','X',')','q'};
+              
+       int x;
+       x=p.length();
+       char[]r= new char[x];
+       
+            for(int a=0;a<x;a++){
+                
+                r[a]='_';
+                
+            }
+           
+            for(int j=0;j<x;j++){
+                
+                System.out.print(r[j]+" ");
+            
+            }
+            
+            int b=0,i=0,k;
+            while(b<x-1){
+                System.out.println(" ");    
+                System.out.println("Ingrese la letra que considere : ");
+                Scanner sc=new Scanner(System.in);
+                l=sc.nextLine();
+                
+                char[] lc=l.toCharArray();
+                
+                k=p.indexOf(l);
+       
+                if(k>-1){
+
+                        r[k]=lc[0];
+                        for(int j=0;j<x;j++){
+                            System.out.print(r[j]+" ");
+                        
+                        }
+                        b++;
+                }
+                else{
+                    System.out.print(n[i]+" ");
+                    i++;
+                }
+            }
+    }
+    
+}
