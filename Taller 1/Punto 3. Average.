@@ -22,7 +22,7 @@ public class Main {
                     }
                 }
                 int average = n/count;
-                System.out.println(average);
+                System.out.println("El promedio es: "+average);
             }
 	}
 	
