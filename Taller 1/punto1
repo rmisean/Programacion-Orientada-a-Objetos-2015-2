@@ -1,8 +1,12 @@
 package numeroimparopar;
 import java.util.Scanner;
+
 public class NumeroimparOpar {
+
     public static void main(String[] args) {
+
           int a,b;
+
         System.out.println("Ingrese dos numeros y dice cual es par, impar, mayor y si son multiplos.");
         
         System.out.println("ingrese el primer numero:");
