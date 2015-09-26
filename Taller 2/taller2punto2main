@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class pruebarectangulo {
+
+    public static void main(String[] args) {
+        Rectangulop rectangulo1= new Rectangulop( 10,20 );
+        System.out.println("El perimetro del rectangulo de largo:  "+rectangulo1.largo+"  y ancho  "+rectangulo1.ancho+"  es:  "+rectangulo1.setPerimetro());
+        System.out.println("El area del rectangulo de largo:  "+rectangulo1.largo+"  y ancho  "+rectangulo1.ancho+"  es:  "+rectangulo1.setArea()); 
+        
+       int i=1; 
+       while(i<10){  
+        double a,b;
+        System.out.println("Ingrese el largo del rectangulo");
+            Scanner sc = new Scanner(System.in); 
+            a= sc.nextDouble();
+            
+        System.out.println("Ingrese el ancho del rectangulo");
+            Scanner si = new Scanner(System.in); 
+            b= sc.nextDouble();
+            
+        Rectangulop rectangulo2= new Rectangulop( a,b );
+        System.out.println("El perimetro del rectangulo de largo:   "+rectangulo2.largo+"   y ancho   "+rectangulo2.ancho+"   es:   "+rectangulo2.setPerimetro());
+        System.out.println("El area del rectangulo de largo:   "+rectangulo2.largo+"   y ancho   "+rectangulo2.ancho+"   es:   "+rectangulo2.setArea());
+        i++;
+       }
+    }
+}
+    class Rectangulop {
+    double largo= 1.0;
+    double ancho= 1.0;
+    
+    Rectangulop (double newLargo,double newAncho){
+        largo=newLargo;
+        ancho=newAncho;
+    }
+    double setPerimetro(){
+        if (0.0< largo && largo<=20.0 && 0.0<ancho && ancho<=20.0){
+        return ((largo+ancho)*2);
+        }
+        else{
+            return 0;
+        }
+    }
+    double setArea(){
+        if (0.0< largo && largo<=20.0 && 0.0<ancho && ancho<=20.0){
+        return (largo*ancho);
+        }
+        else{
+            return 0;
+        }  
+    }
+}
+
