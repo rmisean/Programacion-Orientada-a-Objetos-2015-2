@@ -1,0 +1,27 @@
+public class Rectangulo {
+    double largo= 1.0;
+    double ancho= 1.0;
+    
+    Rectangulo (){
+        }
+    Rectangulo (double newLargo,double newAncho){
+        largo=newLargo;
+        ancho=newAncho;
+    }
+    double setPerimetro(){
+        if (0.0< largo && largo<=20.0 && 0.0<ancho && ancho<=20.0){
+        return (largo+ancho)*2;
+        }
+        else{
+            return 0;
+        }
+    }
+    double setArea(){
+        if (0.0< largo && largo<=20.0 && 0.0<ancho && ancho<=20.0){
+        return largo*ancho;
+        }
+        else{
+            return 0;
+        }  
+    }
+}
