@@ -1,0 +1,207 @@
+
+public class GeometricFigures {
+}
+
+class Rectangle extends GeometricFigures {
+private double width=1.0;
+private double length=1.0;
+
+public Rectangle() {
+}
+
+public Rectangle(double width, double length) {
+    this.width = width;
+    this.length = length;
+}
+
+/** Return width */
+public double getWidth() {
+    return width;
+}
+
+/** Set a new width */
+public void setWidth(double width) {
+    this.width = width;
+}
+
+/** Return length */
+public double getLenght() {
+    return length;
+}
+
+/** Set a new length */
+public void setLenght(double length) {
+    this.length = length;
+}
+
+/** Return area */
+public double getArea() {
+    return width * length;
+}
+
+/** Return perimeter */
+public double getPerimeter() {
+    return 2 * (width * length);
+}
+
+}
+
+class RectangleTriangle extends GeometricFigures {
+private double base=1.0;
+private double height=1.0;
+
+public RectangleTriangle() {
+}
+
+public RectangleTriangle(double base, double height) {
+    this.base = base;
+    this.height = height;
+}
+
+/** Return width */
+public double getBase() {
+    return base;
+}
+
+/** Set a new width */
+public void setBase(double base) {
+    this.base = base;
+}
+
+/** Return height */
+public double getHeight() {
+    return height;
+}
+
+/** Set a new height */
+public void setHeight(double height) {
+    this.height = height;
+}
+
+/** Return area */
+public double getArea() {
+    return ((base * height)/2);
+}
+
+/** Return perimeter */
+public double getPerimeter() {
+    return (base+height+Math.sqrt(base*base+height*height));
+}
+
+}
+
+class IsocelesTriangle extends GeometricFigures {
+private double base=1.0;
+private double height=1.0;
+
+public IsocelesTriangle() {
+}
+
+public IsocelesTriangle(double base, double height) {
+    this.base = base;
+    this.height = height;
+}
+
+/** Return width */
+public double getBase() {
+    return base;
+}
+
+/** Set a new width */
+public void setBase(double base) {
+    this.base = base;
+}
+
+/** Return height */
+public double getHeight() {
+    return height;
+}
+
+/** Set a new height */
+public void setHeight(double height) {
+    this.height = height;
+}
+
+/** Return area */
+public double getArea() {
+    return ((base * height )/2);
+}
+
+/** Return perimeter */
+public double getPerimeter() {
+    return (base+height+Math.sqrt(base*base+height*height));
+}
+}
+
+class Paralelogram extends GeometricFigures {
+private double width=1.0;
+private double length=1.0;
+
+public Paralelogram() {
+}
+
+public Paralelogram(double width, double length) {
+    this.width = width;
+    this.length = length;
+}
+
+/** Return width */
+public double getWidth() {
+    return width;
+}
+
+/** Set a new width */
+public void setWidth(double width) {
+    this.width = width;
+}
+
+/** Return height */
+public double getLenght() {
+    return length;
+}
+
+/** Set a new height */
+public void setLenght(double length) {
+    this.length = length;
+}
+
+/** Return area */
+public double getArea() {
+    return width * length;
+}
+
+/** Return perimeter */
+public double getPerimeter() {
+    return 2 * (width * length);
+}
+
+}
+
+class TestFigures {
+public static void main(String[] args) {
+    
+    Rectangle rectangle =new Rectangle(2, 4);
+    System.out.println("Rectangle ");
+    System.out.println("The area is " + rectangle.getArea());
+    System.out.println("The perimeter is " + rectangle.getPerimeter());
+    
+    RectangleTriangle rectangletriangle =new RectangleTriangle(2, 4);
+    System.out.println("   ");
+    System.out.println("Rectangletriangle ");
+    System.out.println("The area is " + rectangletriangle.getArea());
+    System.out.println("The perimeter is " + rectangletriangle.getPerimeter());
+
+    IsocelesTriangle isocelestriangle =new IsocelesTriangle(2, 4);
+    System.out.println("   ");
+    System.out.println("Isocelestriangle ");
+    System.out.println("The area is " + isocelestriangle.getArea());
+    System.out.println("The perimeter is " + isocelestriangle.getPerimeter());
+    
+    Paralelogram paralelogram =new Paralelogram(2, 4);
+    System.out.println("   ");
+    System.out.println("Paralelogram ");
+    System.out.println("The area is " + paralelogram.getArea());
+    System.out.println("The perimeter is " + paralelogram.getPerimeter());
+}
+
+}
