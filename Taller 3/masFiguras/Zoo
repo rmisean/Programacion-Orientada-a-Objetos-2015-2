@@ -1,0 +1,103 @@
+import java.util.*;
+class Animal {
+
+    String Family;           //instance data
+    Animal(){                //constructor, sets data
+        Family = "";
+    }
+    public String Type(){     //  method, uses data
+        return Family;
+    }
+}
+
+class Lion extends Animal {    // class inheritence
+
+    Lion(){
+        Family = "Cats";
+    }
+}
+
+class Wolf extends Animal {
+
+    Wolf(){
+        Family = "Canines";
+    }
+}
+
+class Bear extends Animal {
+
+    Bear(){
+        Family = "Ursidae";
+    }
+}
+
+class Otter extends Animal {
+
+    Otter(){
+        Family = "Musteliade";
+    }
+}
+
+class Hippo extends Animal {
+
+    Hippo(){
+        Family = "Hippopotamidae";
+    }
+}
+
+class Snake extends Animal {
+
+    Snake(){
+        Family = "Serpentes";
+    }
+}
+
+class Tortoise extends Animal {
+
+    Tortoise(){
+        Family = "Testudines";
+    }
+}
+
+class Dolphin extends Animal {
+
+    Dolphin(){
+        Family = "Delphinidae";
+    }
+}
+
+class Zoo {
+
+    public static ArrayList<Animal> animals=new ArrayList<>();
+    
+    void add(Animal who) {
+            animals.add(who);
+    }
+
+    static void println(String message){
+        System.out.println(message);
+    }
+
+    void printClass(){
+        println("The animals in the zoo are:  ");
+        for (Animal who : animals){
+            println(who.Type());
+        }
+    }
+
+    public static void main(String[] args) {
+        Zoo z = new Zoo();
+        z.add(new Lion());
+        z.add(new Wolf());
+        z.add(new Bear());
+        z.add(new Otter());
+        z.add(new Hippo());
+        z.add(new Snake());
+        z.add(new Tortoise());
+        z.add(new Dolphin());
+        z.printClass();
+        /**println("");
+        println("The first animal Type '" + Zoo.animals.get(0).Type() + "'");
+        println("The last Type '" + Zoo.animals.lastElement().Type() + "'");*/
+    }
+}
