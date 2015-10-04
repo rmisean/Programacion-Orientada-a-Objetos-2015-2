@@ -1,0 +1,107 @@
+
+public class TestShapes {
+double width=1.0;
+double length=1.0;
+double height=1.0;
+double base=1.0;
+}
+
+class Rectangles extends TestShapes{
+
+public Rectangles() {
+}
+
+public Rectangles(double width, double length) {
+    this.width = width;
+    this.length = length;
+}
+
+/** Return width */
+public double getWidth() {
+    return width;
+}
+
+/** Set a new width */
+public void setWidth(double width) {
+    this.width = width;
+}
+
+/** Return length */
+public double getLenght() {
+    return length;
+}
+
+/** Set a new length */
+public void setLenght(double length) {
+    this.length = length;
+}
+
+/** Return area */
+public double getArea() {
+    return width * length;
+}
+
+/** Return perimeter */
+public double getPerimeter() {
+    return 2 * (width * length);
+}
+}
+
+class Triangles extends TestShapes {
+
+public Triangles() {
+}
+
+public Triangles(double base, double height) {
+    this.base = base;
+    this.height = height;
+}
+
+/** Return width */
+public double getBase() {
+    return base;
+}
+
+/** Set a new width */
+public void setBase(double base) {
+    this.base = base;
+}
+
+/** Return height */
+public double getHeight() {
+    return height;
+}
+
+/** Set a new height */
+public void setHeight(double height) {
+    this.height = height;
+}
+
+/** Return area */
+public double getArea() {
+    return ((base * height)/2);
+}
+
+/** Return perimeter */
+public double getPerimeter() {
+    return (base+height+Math.sqrt(base*base+height*height));
+}
+}
+
+class Test{
+public static void main(String[] args) {
+    
+    Rectangles rectangles =new Rectangles(2, 4);
+    System.out.println("Rectangle ");
+    System.out.println("The area is " + rectangles.getArea());
+    System.out.println("The perimeter is " + rectangles.getPerimeter());
+    
+    Triangles triangles =new Triangles(2, 4);
+    System.out.println("   ");
+    System.out.println("Triangles ");
+    System.out.println("The area is " + triangles.getArea());
+    System.out.println("The perimeter is " + triangles.getPerimeter());
+
+}
+
+}
