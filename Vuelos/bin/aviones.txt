@@ -1,0 +1,17 @@
+Comercial:
+	1 Airbus A318 03256 132
+	2 Airbus A319 12542 156
+	3 Airbus A320 28562 180
+	4 Airbus A321 15686 220
+
+Carga:
+	1 Antonov An-124 45618 6 150tn
+	2 Antonov An-225 56111 6 250tn
+	3 Boeing  C-17	 46841 3 77tn
+	4 Ilyushin Il-76 68463 5 50tn
+
+Avioneta:
+	1 Learjet 40	76153 7
+	2 Learjet 75	81351 8
+	3 Cessna 510	71351 4
+	4 Cessna 208B	92351 9
